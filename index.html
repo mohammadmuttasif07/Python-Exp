@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Rolling Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🎲 Dice Rolling Simulator</h1>
+            <p>Roll the dice and test your luck!</p>
+        </header>
+
+        <section class="controls">
+
+            <div class="input-group">
+                <label>Number of Dice (1-10)</label>
+                <input type="number" id="diceCount"
+                       min="1" max="10" value="2">
+            </div>
+
+            <div class="input-group">
+                <label>Number of Rolls (1-100)</label>
+                <input type="number" id="rollCount"
+                       min="1" max="100" value="1">
+            </div>
+
+            <button onclick="rollDice()">Roll Dice 🎲</button>
+
+        </section>
+
+        <p id="error"></p>
+
+        <section class="result-section">
+            <h2>Dice Results</h2>
+            <div id="diceResults">
+                <p>Your dice results will appear here.</p>
+            </div>
+            <h3 id="total">Total: 0</h3>
+        </section>
+
+        <section class="statistics">
+            <h2>Statistics</h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Rolls</h3>
+                    <p id="totalRolls">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Total Dice</h3>
+                    <p id="totalDice">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Average</h3>
+                    <p id="average">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Highest</h3>
+                    <p id="highest">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Lowest</h3>
+                    <p id="lowest">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="frequency">
+            <h2>Face Frequency</h2>
+            <div id="frequency"></div>
+        </section>
+
+        <section class="history-section">
+            <h2>Roll History</h2>
+
+            <div class="buttons">
+                <button onclick="saveHistory()">Save History</button>
+                <button onclick="clearHistory()" class="clear-btn">
+                    Clear History
+                </button>
+            </div>
+
+            <div id="history">
+                <p>No rolls yet.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Dice Rolling Simulator | Developed using HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
