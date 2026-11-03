@@ -1,0 +1,202 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #222;
+    padding: 20px;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    background: #263c65;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.controls, .result-section, .statistics,
+.frequency, .history-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+button {
+    background: #315cbb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #1e3f8c;
+}
+
+.clear-btn {
+    background: #dc3545;
+}
+
+.clear-btn:hover {
+    background: #a71d2a;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #263c65;
+}
+
+#diceResults {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.dice {
+    font-size: 65px;
+    background: #edf2ff;
+    padding: 10px;
+    border-radius: 12px;
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#total {
+    color: #315cbb;
+    font-size: 24px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.stat-card {
+    background: #edf2ff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #315cbb;
+}
+
+.frequency-item {
+    margin: 15px 0;
+}
+
+.bar {
+    background: #315cbb;
+    height: 12px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.frequency-track {
+    background: #e2e5ec;
+    border-radius: 10px;
+}
+
+.history-item {
+    background: #f1f4fa;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 7px;
+    overflow-wrap: anywhere;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+#error {
+    color: red;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .controls, .statistics,
+    .result-section, .frequency,
+    .history-section {
+        padding: 17px;
+    }
+
+    .dice {
+        font-size: 48px;
+    }
+}
